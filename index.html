@@ -21,9 +21,40 @@
       <nav>
         <a href="#">🏠 Início</a>
         <a href="#">🔔 Notificações</a>
-        <a href="#">⚙️ Configurações</a>
-      </nav>
+ 
+ 
+<div id="sidebar" class="sidebar">
+  <ul>
+    <li><a href="#" onclick="setDarkMode()">Modo Escuro</a></li>
+    <li><a href="#" onclick="setLightMode()">Modo Claro</a></li>
+  </ul>
+</div>
+
+ 
+<a href="#" onclick="toggleSidebar()">⚙️ Configurações</a>
+
+
+     </nav>
     </footer>
   </div>
 </body>
 </html>
+<script>
+// Função para abrir e fechar a barra lateral
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('active');
+}
+
+// Função para ativar o modo escuro
+function setDarkMode() {
+  document.body.classList.add('dark-mode');
+  toggleSidebar(); // Fecha a barra lateral ao selecionar o modo
+}
+
+// Função para ativar o modo claro
+function setLightMode() {
+  document.body.classList.remove('dark-mode');
+  toggleSidebar(); // Fecha a barra lateral ao selecionar o modo
+}
+</script>
