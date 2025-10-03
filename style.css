@@ -168,3 +168,23 @@ footer .redes div{
    display: flex;
    align-items: center;
 }
+@media screen and (max-width: 1108px){
+     body{
+        background: blue;
+}
+main .grid-3 .coluna
+	width: 31%;
+	margin: 10px;
+}
+@media screen and (max-width: 870px){
+    main .grid-3 .coluna{
+         width: 98%;
+}
+    aside{
+    display:none;
+}
+    main{
+   width: 100%;
+}
+}
+
