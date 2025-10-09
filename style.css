@@ -187,4 +187,14 @@ main .grid-3 .coluna
    width: 100%;
 }
 }
-
+footer{
+ flex-direction: column;
+  text-align:center;
+}
+footer{
+ width: 93%;
+}
+footer .redes{
+  display: flex;
+  justify-content: center;
+}
