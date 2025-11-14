@@ -1,60 +1,65 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu App</title>
-  <link rel="stylesheet" href="style.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<title>Pufe Burger</title>
 </head>
 <body>
-  <div class="app">
-    <header>
-      <h1>Meu App</h1>
-    </header>
+	<header>
+		<a href="/">
+			<img src="logo.png">
+		</a>
+		<a href="javascript:mostraMenu();">
+			<img src="menu.png">
+		</a>
 
-    <main>
-      <p>Bem-vindo ao meu aplicativo!</p>
-      <button onclick="alert('Você clicou!')">Clique aqui</button>
-    </main>
-    
-    <footer>
-      <nav>
-        <a href="#">🏠 Início</a>
-        <a href="#">🔔 Notificações</a>
- 
- 
-<div id="sidebar" class="sidebar">
-  <ul>
-    <li><a href="#" onclick="setDarkMode()">Modo Escuro</a></li>
-    <li><a href="#" onclick="setLightMode()">Modo Claro</a></li>
-  </ul>
-</div>
+		<nav id="menu" class="esconder">
+			<a href="javascript:mostraMenu();" class="fecharMenu">x</a>
+			<ul>
+				<li><a href="">Inicio</a></li>
+				<li><a href="">Lanches</a></li>
+				<li><a href="">Bebidas</a></li>
+				<li><a href="">Combos</a></li>
+			</ul>
+		</nav>
 
- 
-<a href="#" onclick="toggleSidebar()">⚙️ Configurações</a>
+		<script>
+			  function mostraMenu() {
+			    const menu = document.getElementById('menu');
+			    menu.classList.toggle('ativo');
+			  }
+		</script>
 
-
-     </nav>
-    </footer>
-  </div>
+	</header>
+	<main>
+		<div class="container">
+			<div class="destaque">
+				<div class="imagem-destaque">
+					<img src="https://www.sabornamesa.com.br/media/k2/items/cache/bf1e20a4462b71e3cc4cece2a8c96ac8_XL.jpg">
+				</div>
+				<div class="links">
+					<a href="">Combo Especial</a>
+					<a href="">Combo Kids</a>
+				</div>
+			</div>
+		</div>
+		<div class="popular">
+    <h2>popular</h2>
+		<ul>
+			 <li>
+				 <div class="imagem-destaque">
+					 <img src="https">
+				 </div>
+				 <div class="descricao">
+				<h3>x - vina</h3>
+				<p>the best burguer
+			  recipe for</p>
+				<a href="#">pedir</a>	 
+	</div>
+	</main>
 </body>
 </html>
-<script>
-// Função para abrir e fechar a barra lateral
-function toggleSidebar() {
-  const sidebar = document.getElementById('sidebar');
-  sidebar.classList.toggle('active');
-}
-
-// Função para ativar o modo escuro
-function setDarkMode() {
-  document.body.classList.add('dark-mode');
-  toggleSidebar(); // Fecha a barra lateral ao selecionar o modo
-}
-
-// Função para ativar o modo claro
-function setLightMode() {
-  document.body.classList.remove('dark-mode');
-  toggleSidebar(); // Fecha a barra lateral ao selecionar o modo
-}
-</script>
